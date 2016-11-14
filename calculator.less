@@ -1,5 +1,5 @@
 /* Collor Pallete */
-@white: #FAFAFA;
+@white: #f8f8f8;
 
 @lightgray: #CBCBCC;
 @gray: #ABA7A1;
@@ -10,10 +10,13 @@
 @brown: #5E564D;
 @darkbrown: #69625C;
 
-@darkblue: #363843;
+@darkblue: #323850;
 @darkblue-start: rgba(50, 56, 80, 0.78);
 @darkblue-end: rgba(50, 56, 80, 0.96);
-@orange: #ED683D;
+@orange-start: #ff9e47;
+@orange-end: #ED683D;
+
+@font: "Helvetica Neue", sans-serif;
 
 /* box sizing para que os tamanhos considerem a div toda, incluindo os margins e paddings */
 * {
@@ -30,20 +33,65 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
+  font-family: @font;
+  font-weight: 100;
 
   .board {
     width: 270px;
-    height: 510px;
+    height: 450px;
     margin-left: auto;
     margin-right: auto;
     background-color: @white;
+    padding: 20px;
+    text-align: right;
+
+    #expression {
+      color: @gray;
+      font-size: 9pt;
+    }
+
+    #acc {
+      margin-top: 10px;
+      color: @blackgray;
+      font-size: 38pt;
+    }
+
   }
 
   .numpad {
+    padding: 20px;
+    color: @white;
     position: absolute;
     width: 100%;
     height: 325px;
-    bottom: 60px;
+    bottom: 65px;
     background: linear-gradient(155deg, @darkblue-start, @darkblue-end);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.26);
+
+    .numpad-row {
+
+      .num {
+        font-size: 20pt;
+        width: 65px;
+        height: 58px;
+        display: table-cell; /* utilizando o table-cell o vertical align funciona também */
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .equal {
+    color: @white;
+    font-size: 36pt;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    width: 270px;
+    height: 65px;
+    text-align: center;
+    vertical-align: middle;
+    background: linear-gradient(155deg, @orange-start, @orange-end);
   }
 }
