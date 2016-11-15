@@ -78,3 +78,13 @@ html {
   box-shadow: inset 0 -10px 20px #ff9e47;
   cursor: pointer;
 }
+#footer {
+  font-family: "Helvetica Neue", sans-serif;
+  color: rgba(50, 56, 80, 0.96);
+  text-align: center;
+  margin-top: 30px;
+}
+#footer a {
+  color: inherit;
+  font-weight: bold;
+}
