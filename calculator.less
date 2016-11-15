@@ -77,6 +77,13 @@ body {
         display: table-cell; /* utilizando o table-cell o vertical align funciona também */
         text-align: center;
         vertical-align: middle;
+        transition: .2s all ease-in;    /* todas as alterações de CSS serão animadas no estilo ease-in */
+
+        &:hover {
+          background: @darkblue-start;
+          cursor: pointer;
+          border-radius: 8px;
+        }
       }
     }
   }
@@ -93,5 +100,11 @@ body {
     text-align: center;
     vertical-align: middle;
     background: linear-gradient(155deg, @orange-start, @orange-end);
+    transition: .2s all ease-in;
+
+    &:hover {
+      box-shadow: inset 0 -10px 20px @orange-start;
+      cursor: pointer;
+    }
   }
 }

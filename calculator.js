@@ -6,15 +6,15 @@
 	"use strict";
 	//calculator core functions
 	let controller = {
-		acc: 0,									//accumulator
-		diplayValue: 0,							//value diplayed on de calculator
-		expression: "",							//expression displayed to the user
-		currentOperation: null,					//detect witch operation is going on
-		newValue: false,						//controls the user input, when he is inserting a new value or the same number
+		acc: 0,																//accumulator
+		diplayValue: 0,														//value diplayed on de calculator
+		expression: "",														//expression displayed to the user
+		currentOperation: null,												//detect witch operation is going on
+		newValue: false,													//controls the user input, when he is inserting a new value or the same number
 
 		/* processe de digits of the user */
 		processDigit: function (value) {
-			if (this.filterInt(value)) {							/* if is numeral */
+			if (this.filterInt(value)) {									/* if is numeral */
 				this.expression += value;
 
 				if(this.newValue){
@@ -25,7 +25,7 @@
 				let displayStr = this.diplayValue + "" + value;
 				this.diplayValue = parseInt(displayStr);
 			}
-			else {													/* if is an operation */
+			else {															/* if is an operation */
 				switch (value) {
 					case "clear":
 						this.reset();
@@ -90,7 +90,6 @@
 			this.newValue = false;
 		},
 
-
 		/* calculate conform the operation */
 		calculate: function () {
 			if(this.currentOperation){
@@ -121,7 +120,7 @@
 				displayValueField = document.getElementById("acc");
 
 			expressionField.innerHTML = expression;
-			displayValueField.innerHTML = acc;
+			displayValueField.innerHTML = (acc + "").substr(0,8);
 		}
 	};
 
