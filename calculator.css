@@ -3,8 +3,9 @@
 * {
   box-sizing: border-box;
 }
-body {
-  background-color: #B5B1AA;
+html {
+  background-image: linear-gradient(-45deg, #A6A19B 12%, #A7A39D 12%, #A7A39D 50%, #79726c 50%, #79726c 88%, #A6A19B 88%, #A6A19B);
+  background-size: 100% 150%;
 }
 .calculator {
   position: relative;
